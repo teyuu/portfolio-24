@@ -41,7 +41,7 @@ export const Hero = () => {
   return (
     <section className="h-[80vh] flex items-center">
       <div className="container mx-auto h-fit w-[80%] flex  justify-center items-center lg:gap-20">
-        <motion.div className="my-div" variants={fadeInImageAnimationVariant} initial="initial" animate="animate" viewport={{once:true}} >
+        <motion.div  variants={fadeInImageAnimationVariant} initial="initial" animate="animate" viewport={{once:true}} >
           <Image
             src="/images/profilepic.png"
             alt=""
@@ -56,7 +56,7 @@ export const Hero = () => {
             <span className="text-lg">Hello, I&apos;m</span>
             <motion.span
               variants={fadeInTitleAnimationVariant} initial="initial" animate="animate" viewport={{once:true}} 
-              className="my-div text-4xl lg:text-5xl font-semibold "
+              className="text-4xl lg:text-5xl font-semibold "
             >
               Matías Tellini
             </motion.span>
