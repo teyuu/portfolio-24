@@ -1,5 +1,5 @@
 import React from 'react'
-import {containerCenter, titleCointaer, h2Title} from "./tailwindClasses"
+import {containerCenter, titleContainer, h2Title} from "./tailwindClasses"
 import {  FaLinkedin  } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 
@@ -9,7 +9,7 @@ export const Contact = () => {
     <section className='container mx-auto h-auto lg:h-[80vh] flex flex-col justify-center gap-5 items-center px-3 py-5'>
 
       {/* Title */}
-      <div className={titleCointaer}>
+      <div className={titleContainer}>
         <p>Get in touch</p>
         <h2 className={h2Title}>Contact me</h2>
       </div>

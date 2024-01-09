@@ -10,7 +10,7 @@ import { Loading } from './components/Loading';
 import NavBar from './components/Navbar/NavBar';
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {

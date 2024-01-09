@@ -5,11 +5,43 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeInAnimationVariant } from "./FramerMotionVariants";
 
+
+const fadeInImageAnimationVariant ={
+  initial: {
+    opacity: 0,
+    x: -500,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration:0.5,
+      delay:0.5,
+      ease: 'easeOut',
+    }
+  },
+}
+const fadeInTitleAnimationVariant ={
+  initial: {
+    opacity: 0,
+    x: 500,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration:0.5,
+      delay:0.5,
+      ease: 'easeOut',
+    }
+  },
+}
+
 export const Hero = () => {
   return (
     <section className="h-[80vh] flex items-center">
       <div className="container mx-auto h-fit w-[80%] flex  justify-center items-center lg:gap-20">
-        <motion.div variants={fadeInAnimationVariant} initial="initial" whileInView="animate"  viewport={{once:true}} >
+        <motion.div variants={fadeInImageAnimationVariant} initial="initial" whileInView="animate" viewport={{once:"true"}} >
           <Image
             src="/images/profilepic.png"
             alt=""
@@ -23,7 +55,7 @@ export const Hero = () => {
           <div className="flex flex-col gap-5">
             <span className="text-lg">Hello, I&apos;m</span>
             <motion.span
-              variants={fadeInAnimationVariant} initial="initial" whileInView="animate" viewport={{once:true}}
+              variants={fadeInTitleAnimationVariant} initial="initial" whileInView="animate" viewport={{once:"true"}} 
               className="text-4xl lg:text-5xl font-semibold "
             >
               Matías Tellini

@@ -13,3 +13,11 @@ export const fadeInAnimationVariant = {
       }
     },
   };
+
+  // Función que devuelve los variants
+export const getAnimationVariants = () => ({
+  variants: fadeInAnimationVariant,
+  initial: "initial",
+  whileInView: "animate",
+  viewport: { once: true },
+});
