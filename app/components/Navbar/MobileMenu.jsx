@@ -26,7 +26,7 @@ export const MobileMenu = ({ navLinks, toggleMenu }) => {
       animate={{ x: 0 }}
       exit={{ x: "100%" }}
       transition={{ type: "tween", duration: 0.5 }}
-      className="lg:hidden h-screen w-full top-0  fixed bg-black text-white uppercase z-50 overflow-hidden"
+      className="my-div lg:hidden h-screen w-full top-0  fixed bg-black text-white uppercase z-50 overflow-hidden"
     >
       <div className="container mx-auto w-full flex items-center py-8 justify-around">
         <div className="opacity-0">
