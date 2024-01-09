@@ -1,7 +1,7 @@
 import React from "react";
 import { containerCenter, h2Title, titleContainer } from "./tailwindClasses";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { getAnimationVariants } from "./FramerMotionVariants";
 
 
@@ -55,7 +55,9 @@ export const Projects = () => {
       </motion.div>
 
       {/* Cards container */}
+      
       <motion.div className="flex flex-col lg:flex-row gap-5 w-full ">
+      <AnimatePresence>
         {projects.map((e, index) => (
           <motion.div
             className="w-full lg:w-[33%] border-2 rounded-3xl p-5 flex flex-col justify-evenly items-center gap-3"
@@ -74,6 +76,7 @@ export const Projects = () => {
             <ProjectCards imagePath={e.imagePath} />
           </motion.div>
         ))}
+            </AnimatePresence>
       </motion.div>
     </section>
   );
