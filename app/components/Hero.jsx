@@ -8,7 +8,7 @@ import { fadeInAnimationVariant } from "./FramerMotionVariants";
 export const Hero = () => {
   return (
     <section className="h-[80vh] flex items-center">
-      <div className="container mx-auto h-fit w-[80%] flex  justify-center items-center gap-20">
+      <div className="container mx-auto h-fit w-[80%] flex  justify-center items-center lg:gap-20">
         <motion.div variants={fadeInAnimationVariant} initial="initial" whileInView="animate"  viewport={{once:true}} >
           <Image
             src="/images/profilepic.png"
