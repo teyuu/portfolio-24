@@ -15,7 +15,7 @@ export const Contact = () => {
       </div>
 
       {/* Conctact card */}
-      <div className='flex justify-around w-full xl:w-2/4 p-5 rounded-full border-2 text-xl '>
+      <div className='flex flex-col lg:flex-row justify-around items-center gap-3 w-full xl:w-2/4 p-5 rounded-full border-2 text-xl'>
         <div className='flex items-center gap-2'>
           <IoMail/>
           <p>tellini.matias@gmail.com</p>

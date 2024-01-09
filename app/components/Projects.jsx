@@ -66,10 +66,8 @@ export const Projects = () => {
             }}
             whileInView={{
               opacity:1,
-              y:0
-            }}
-            transition={{
-              duration:1, delay: index * 0.3
+              y:0,
+              transition: {duration:0.5, delay: index * 0.2}
             }}
             viewport={{once:true}}
           >
