@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { fadeInAnimationVariant } from "./FramerMotionVariants";
+
 
 
 const fadeInImageAnimationVariant ={
