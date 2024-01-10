@@ -9,7 +9,7 @@ import { fadeInAnimationVariant } from "./FramerMotionVariants";
 const fadeInImageAnimationVariant ={
   initial: {
     opacity: 0,
-    x: -500,
+    x: "-100%",
   },
   animate: {
     opacity: 1,
@@ -24,7 +24,7 @@ const fadeInImageAnimationVariant ={
 const fadeInTitleAnimationVariant ={
   initial: {
     opacity: 0,
-    x: 500,
+    x: "100%",
   },
   animate: {
     opacity: 1,

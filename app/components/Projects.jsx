@@ -24,17 +24,17 @@ const projects = [
 
 const ProjectCards = ({ imagePath }) => {
   return (
-    <div>
-      <div className="relative h-[40vh] w-full">
+    <div className="flex flex-col gap-5">
+      <div className="relative h-auto w-full">
         <Image
           src={imagePath}
-          fill
-          style={{ objectFit: "contain" }}
+          width={300}
+          height={0}
           alt="project"
         />
       </div>
-      <p></p>
-      <div className="space-x-3 text-white w-full text-center text-sm">
+      
+      <div className="flex gap-3 text-white w-full text-center text-sm">
         <button className="rounded-full bg-black p-3 w-[150px]">Github</button>
         <button className="rounded-full bg-black p-3 w-[150px] ">
           Live Demo
@@ -56,11 +56,11 @@ export const Projects = () => {
 
       {/* Cards container */}
       
-      <motion.div className="flex flex-col lg:flex-row gap-5 w-full ">
+      <motion.div className="flex flex-col lg:flex-row justify-evenly gap-5 w-full ">
       <AnimatePresence>
         {projects.map((e, index) => (
           <motion.div
-            className="w-full lg:w-[33%] border-2 rounded-3xl p-5 flex flex-col justify-evenly items-center gap-3"
+            className="w-full lg:w-fit border-2 rounded-3xl p-5 flex flex-col justify-evenly items-center gap-3"
             key={e.id}
             initial={{
               opacity:0,
