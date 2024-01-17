@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { MdClose } from "react-icons/md";
 import ToggleSwitch2 from "../buttons/ToggleSwitch2";
+import Link from "next/link";
 
 const mobileLinkVars = {
   initial: {
@@ -44,12 +45,13 @@ export const MobileMenu = ({ navLinks, toggleMenu }) => {
       >
         <ul className="w-full flex flex-col lg:flex-row items-center text-2xl gap-10">
           {navLinks.map((e) => (
-            
-            <motion.li whileTap={{ scale: 1.2}} key={e.title}>{e.title}</motion.li>
+            <Link  key={e.title} href={e.link}>
+            <motion.li onClick={toggleMenu} whileTap={{ scale: 1.2}}>{e.title}</motion.li>
+            </Link>
           ))}
-          <div>
+          {/* <div>
             <ToggleSwitch2 />
-          </div>
+          </div> */}
         </ul>
       </motion.div>
     </motion.div>

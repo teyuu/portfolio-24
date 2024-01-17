@@ -5,6 +5,7 @@ import { motion, AnimatePresence, spring } from "framer-motion";
 import { MobileMenu } from "./MobileMenu";
 import ToggleSwitch2 from "../buttons/ToggleSwitch2";
 import { navLinks } from "./Navlinks";
+import Link from "next/link";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,14 +18,20 @@ const NavBar = () => {
       <nav className="lg:h-[14ch] flex items-center py-8">
         <div className="container mx-auto flex justify-around">
           {/* Titulo */}
-          <div>
-            <h1 className="text-4xl hover:cursor-pointer ">MT</h1>
-          </div>
+          <motion.div whileHover={{
+                  textShadow:'#FC0 1px 0 10px',
+                  cursor:'pointer',
+                  scale:1.1
+                  
+                }} >
+            <h1 className="text-4xl  hover:cursor-pointer ">MT</h1>
+          </motion.div >
 
           {/*NavLinks Items */}
           <div className="hidden lg:flex">
             <ul className="w-full flex flex-col lg:flex-row items-center text-2xl gap-10 ">
               {navLinks.map((e) => (
+                <Link key={e.title} href={e.link}>
                 <motion.li 
                 whileHover={{
                   textShadow:'#FC0 1px 0 10px',
@@ -32,13 +39,14 @@ const NavBar = () => {
                   scale:1.1
                   
                 }} 
-                key={e.title}>
+                >
                   {e.title}
                 </motion.li>
+                </Link>
               ))}
-              <div>
+              {/* <div>
                 <ToggleSwitch2 />
-              </div>
+              </div> */}
             </ul>
           </div>
 

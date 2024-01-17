@@ -1,44 +1,63 @@
+
 import React from "react";
 import { containerCenter, h2Title, titleContainer } from "./tailwindClasses";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import { getAnimationVariants } from "./FramerMotionVariants";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { FaArrowAltCircleLeft ,FaArrowAltCircleRight } from "react-icons/fa";
+
 
 
 const projects = [
   {
     id:1,
     imagePath: "/images/project-1.png",
+    projectName: "Clinica Kinessfe"
   },
   {
     id:2,
     imagePath: "/images/project-2.png",
+    projectName:"CineFilm"
   },
   {
     id:3,
     imagePath: "/images/project-3.png",
+    projectName:"Todos App"
   },
+  {
+    id:4,
+    imagePath: "/images/project-4.png",
+    projectName:"CoinPlus"
+  },
+  
 ];
 
 
 
-const ProjectCards = ({ imagePath }) => {
+const ProjectCards = ({ imagePath, name }) => {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-5 w-fit text-center xl:mx-auto mx-10">
+      
+        <h2 className="text-xl uppercase font-bold border-b-2 bg-slate-400 text-white shadow-lg">{name}</h2>
+        
       <div className="relative h-auto w-full">
         <Image
           src={imagePath}
-          width={300}
+          width={400}
           height={0}
           alt="project"
+          className="rounded-xl"
         />
       </div>
-      
-      <div className="flex gap-3 text-white w-full text-center text-sm">
-        <button className="rounded-full bg-black p-3 w-[150px]">Github</button>
+
+      <div className="flex justify-center gap-3 text-white w-full text-center text-sm">
         <button className="rounded-full bg-black p-3 w-[150px] ">
-          Live Demo
+          Visit
         </button>
+        <button className="rounded-full bg-black p-3 w-[150px]">Github</button>
       </div>
     </div>
   );
@@ -46,8 +65,36 @@ const ProjectCards = ({ imagePath }) => {
 
 export const Projects = () => {
   const animationVariants = getAnimationVariants();
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3, // Número de tarjetas visibles a la vez
+    slidesToScroll: 1,
+    nextArrow: <FaArrowAltCircleRight color="black"/>,
+    prevArrow: <FaArrowAltCircleLeft  color="black" />,
+    responsive: [
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+
+  };
+
   return (
-    <section className={containerCenter}>
+    <section id="projects" className="container mx-auto h-auto lg:h-[80vh] flex flex-col justify-around">
       {/* Title */}
       <motion.div className={titleContainer} {...animationVariants}>
         <p>Browse my recent</p>
@@ -56,28 +103,19 @@ export const Projects = () => {
 
       {/* Cards container */}
       
-      <motion.div className="flex flex-col lg:flex-row justify-evenly gap-5 w-full ">
-      <AnimatePresence>
+      
+      <Slider {...settings}>
+
         {projects.map((e, index) => (
           <motion.div
-            className="w-full lg:w-fit border-2 rounded-3xl p-5 flex flex-col justify-evenly items-center gap-3"
-            key={e.id}
-            initial={{
-              opacity:0,
-              y:500
-            }}
-            whileInView={{
-              opacity:1,
-              y:0,
-              transition: {duration:0.5, delay: index * 0.2}
-            }}
-            viewport={{once:true}}
+             key={e.id}
           >
-            <ProjectCards imagePath={e.imagePath} />
+            <ProjectCards imagePath={e.imagePath} name={e.projectName}/>
           </motion.div>
         ))}
-            </AnimatePresence>
-      </motion.div>
+      </Slider>
+           
+     
     </section>
   );
 };

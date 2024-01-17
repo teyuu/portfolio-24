@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 
 
@@ -66,16 +67,20 @@ export const Hero = () => {
           </div>
 
           <div className="flex flex-col items-center gap-5">
-            <button className="rounded-full w-fit border p-4 bg-black  text-white text-sm">
+            <button className="rounded-full bg-black p-3 w-[150px] text-white">
               Contact Info
             </button>
             <div className="text-4xl space-x-2">
+              <Link href='https://github.com/teyuu' target="_blank">
               <button>
                 <FaGithub />
               </button>
+              </Link>
+              <Link href='https://www.linkedin.com/in/matias-tellini-12a705232/'target="_blank">
               <button>
                 <FaLinkedin />
               </button>
+              </Link>
             </div>
           </div>
         </div>

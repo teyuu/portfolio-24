@@ -26,7 +26,7 @@ export const About = () => {
   const animationVariants = getAnimationVariants();
 
   return (
-    <motion.section className={containerCenter}>
+    <motion.section id="about" className={containerCenter}>
       <motion.div className={titleContainer} {...animationVariants}>
         <span>Get to know more</span>
         <h2 className={h2Title}>About me</h2>
@@ -34,7 +34,12 @@ export const About = () => {
 
       <div className="h-2/3 flex flex-col lg:flex-row items-center gap-10 ">
         <motion.div className="h-[300px] w-2/4" {...animationVariants}>
-          <Image src="/images/computer.png" alt="computer" width={300} height={300} />
+          <Image
+            src="/images/computer.png"
+            alt="computer"
+            width={300}
+            height={300}
+          />
         </motion.div>
 
         <div className="flex flex-col justify-between h-3/5">
@@ -42,28 +47,29 @@ export const About = () => {
             <Card
               icon={<GiAchievement />}
               title="Experience"
-              text1="2+ years"
-              text2="Frontend Development"
+              text1="1+ years"
+              text2="Freelance Developer"
             />
             <Card
               icon={<IoPeopleSharp />}
               title="Education"
-              text1="2+ years"
-              text2="Frontend Development"
+              text1="Bootcamp Full Stack en Henry"
+              text2="More than 700 hours of theoretical-practical training"
             />
           </motion.div>
           <motion.p className="mt-5" {...animationVariants}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-            reprehenderit et laborum, rem, dolore eum quod voluptate
-            exercitationem nobis, nihil esse debitis maxime facere minus sint
-            delectus velit in eos quo officiis explicabo deleniti dignissimos.
-            Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-            reiciendis ea magnam? Nulla, impedit fuga!
+            I am a <span className="font-bold">Full Stack developer</span>. My education includes an intensive
+            Bootcamp at Henry, where I gained over <span className="font-bold">700 hours of theoretical and
+            hands-on training.</span>  Additionally, I have successfully contributed as
+            a Freelance Developer on a web project, showcasing my ability to
+            deliver high-quality solutions independently and collaborate
+            effectively with clients. I have further enhanced my skills through
+            various programming courses, demonstrating my commitment to
+            continuous learning and staying updated with the latest industry
+            trends.
           </motion.p>
         </div>
       </div>
     </motion.section>
   );
 };
-
-
