@@ -42,17 +42,23 @@ export const Hero = () => {
   return (
     <section className="h-[80vh] flex items-center">
       <div className="container mx-auto h-fit w-[80%] flex  justify-center items-center lg:gap-20">
-        <motion.div  variants={fadeInImageAnimationVariant} initial="initial" animate="animate" viewport={{once:true}} >
-          <Image
-            src="/images/profilepic.png"
-            alt=""
-            className="hidden lg:flex"
-            width={400}
-            height={0}
-            style={{ width: '100%', height: '30vh' }}
-          />
-        </motion.div>
-
+      <motion.div
+  variants={fadeInImageAnimationVariant}
+  initial="initial"
+  animate="animate"
+  viewport={{ once: true }}
+  layoutId="profile-pic"
+>
+  <Image
+    src="/images/profilepic.png"
+    srcSet="/images/profilepic-small.png 400w, /images/profilepic-large.png 800w"
+    alt="Foto de perfil de un usuario"
+    className="hidden lg:flex"
+    width={400}
+    height={400}
+    priority
+  />
+</motion.div>
         <div className="h-2/5 w-fit flex flex-col text-center justify-between gap-4">
           <div className="flex flex-col gap-5">
             <span className="text-lg">Hello, I&apos;m</span>

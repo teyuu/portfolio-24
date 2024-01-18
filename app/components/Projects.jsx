@@ -73,36 +73,35 @@ const ProjectCards = ({ imagePath, name }) => {
     </div>
   );
 };
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3, // Número de tarjetas visibles a la vez
+  slidesToScroll: 1,
+  nextArrow: <NextArrow />, // Flecha derecha personalizada
+  prevArrow: <PrevArrow />,
+  responsive: [
+    {
+      breakpoint: 1300,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 
-export const Projects = () => {
+};
+export const Projects = ({settings}) => {
   const animationVariants = getAnimationVariants();
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3, // Número de tarjetas visibles a la vez
-    slidesToScroll: 1,
-    nextArrow: <NextArrow />, // Flecha derecha personalizada
-    prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1300,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-
-  };
 
   return (
     <section
