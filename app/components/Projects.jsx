@@ -62,6 +62,7 @@ const ProjectCards = ({ imagePath, name }) => {
           height={0}
           alt="project"
           className="rounded-xl"
+          style={{ width: '100%', height: 'auto' }}
         />
       </div>
 

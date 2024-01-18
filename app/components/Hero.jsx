@@ -49,6 +49,7 @@ export const Hero = () => {
             className="hidden lg:flex"
             width={400}
             height={0}
+            style={{ width: '100%', height: '30vh' }}
           />
         </motion.div>
 
