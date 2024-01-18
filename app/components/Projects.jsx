@@ -1,48 +1,60 @@
-
 import React from "react";
 import { containerCenter, h2Title, titleContainer } from "./tailwindClasses";
 import Image from "next/image";
-import {  motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { getAnimationVariants } from "./FramerMotionVariants";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaArrowAltCircleLeft ,FaArrowAltCircleRight } from "react-icons/fa";
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 
+// Componentes personalizados para las flechas
+const NextArrow = ({ onClick, className }) => (
+  <FaArrowAltCircleRight
+    className={className}
+    onClick={onClick}
+    color="black"
+  />
+);
 
+const PrevArrow = ({ onClick, className }) => (
+  <FaArrowAltCircleLeft
+    className={className}
+    onClick={onClick}
+    color="black"
+  />
+);
 
 const projects = [
   {
-    id:1,
+    id: 1,
     imagePath: "/images/project-1.png",
-    projectName: "Clinica Kinessfe"
+    projectName: "Clinica Kinessfe",
   },
   {
-    id:2,
+    id: 2,
     imagePath: "/images/project-2.png",
-    projectName:"CineFilm"
+    projectName: "CineFilm",
   },
   {
-    id:3,
+    id: 3,
     imagePath: "/images/project-3.png",
-    projectName:"Todos App"
+    projectName: "Todos App",
   },
   {
-    id:4,
+    id: 4,
     imagePath: "/images/project-4.png",
-    projectName:"CoinPlus"
+    projectName: "CoinPlus",
   },
-  
 ];
-
-
 
 const ProjectCards = ({ imagePath, name }) => {
   return (
     <div className="flex flex-col gap-5 w-fit text-center xl:mx-auto mx-10">
-      
-        <h2 className="text-xl uppercase font-bold border-b-2 bg-slate-400 text-white shadow-lg">{name}</h2>
-        
+      <h2 className="text-xl uppercase font-bold border-b-2 bg-slate-400 text-white shadow-lg">
+        {name}
+      </h2>
+
       <div className="relative h-auto w-full">
         <Image
           src={imagePath}
@@ -54,9 +66,7 @@ const ProjectCards = ({ imagePath, name }) => {
       </div>
 
       <div className="flex justify-center gap-3 text-white w-full text-center text-sm">
-        <button className="rounded-full bg-black p-3 w-[150px] ">
-          Visit
-        </button>
+        <button className="rounded-full bg-black p-3 w-[150px] ">Visit</button>
         <button className="rounded-full bg-black p-3 w-[150px]">Github</button>
       </div>
     </div>
@@ -72,8 +82,8 @@ export const Projects = () => {
     speed: 500,
     slidesToShow: 3, // Número de tarjetas visibles a la vez
     slidesToScroll: 1,
-    nextArrow: <FaArrowAltCircleRight color="black"/>,
-    prevArrow: <FaArrowAltCircleLeft  color="black" />,
+    nextArrow: <NextArrow />, // Flecha derecha personalizada
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1300,
@@ -94,7 +104,10 @@ export const Projects = () => {
   };
 
   return (
-    <section id="projects" className="container mx-auto h-auto lg:h-[80vh] flex flex-col justify-around">
+    <section
+      id="projects"
+      className="container mx-auto h-auto lg:h-[80vh] flex flex-col justify-around"
+    >
       {/* Title */}
       <motion.div className={titleContainer} {...animationVariants}>
         <p>Browse my recent</p>
@@ -102,20 +115,14 @@ export const Projects = () => {
       </motion.div>
 
       {/* Cards container */}
-      
-      
-      <Slider {...settings}>
 
+      <Slider {...settings}>
         {projects.map((e, index) => (
-          <motion.div
-             key={e.id}
-          >
-            <ProjectCards imagePath={e.imagePath} name={e.projectName}/>
+          <motion.div key={e.id}>
+            <ProjectCards imagePath={e.imagePath} name={e.projectName} />
           </motion.div>
         ))}
       </Slider>
-           
-     
     </section>
   );
 };
