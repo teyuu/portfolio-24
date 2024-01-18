@@ -46,20 +46,22 @@ const projects = [
 
 const ProjectCards = ({ imagePath, name }) => {
   return (
-    <div className="flex flex-col gap-5 w-fit text-center xl:mx-auto mx-5">
-      <h2 className="text-xl uppercase font-bold border-b-2 bg-slate-400 text-white shadow-lg">
+    <div className="flex flex-col justify-center items-center gap-5 w-auto text-center mx-5">
+
+      <h2 className="text-xl uppercase font-bold border-b-2 bg-slate-400 text-white shadow-lg w-full">
         {name}
       </h2>
 
-      <div className="relative h-auto w-[450px]">
+      <div className="relative  w-auto">
         <Image
           src={imagePath}
-          width={400}
+          srcSet="/images/project-1-small.png 300w, /images/project-1-large.png 450w"
+          width={450}
           height={300}
-          alt="Imagen de un proyecto"
+          alt={`Imagen del proyecto ${name}`}
           className="rounded-xl"
-          layout="responsive"
-          
+          quality={50}
+          priority
         />
       </div>
 
@@ -98,12 +100,13 @@ export const Projects = () => {
         },
       },
     ],
+    className:""
   };
 
   return (
     <section
       id="projects"
-      className="container mx-auto h-auto lg:h-[80vh] flex flex-col justify-around"
+      className=" container mx-auto h-auto lg:h-[80vh] flex flex-col justify-around p-5"
     >
       {/* Title */}
       <motion.div className={titleContainer} {...animationVariants}>
@@ -112,14 +115,17 @@ export const Projects = () => {
       </motion.div>
 
       {/* Cards container */}
+<div className="">
 
       <Slider {...settings}>
         {projects.map((e, index) => (
-          <motion.div key={e.id}>
+          <motion.div key={e.id} >
             <ProjectCards imagePath={e.imagePath} name={e.projectName} />
           </motion.div>
         ))}
       </Slider>
+</div>
     </section>
   );
 };
+

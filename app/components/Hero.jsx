@@ -47,7 +47,7 @@ export const Hero = () => {
   initial="initial"
   animate="animate"
   viewport={{ once: true }}
-  layoutId="profile-pic"
+ 
 >
   <Image
     src="/images/profilepic.png"
