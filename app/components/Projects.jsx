@@ -7,6 +7,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
+import Link from "next/link";
 
 // Componentes personalizados para las flechas
 const NextArrow = ({ onClick, className }) => (
@@ -26,25 +27,29 @@ const projects = [
     id: 1,
     imagePath: "/images/project-1.png",
     projectName: "Clinica Kinessfe",
+    link:"https://www.clinicakinessfe.com.ar/"
   },
   {
     id: 2,
     imagePath: "/images/project-2.png",
     projectName: "CineFilm",
+    link:"https://movies-nextjs13.vercel.app/"
   },
   {
     id: 3,
     imagePath: "/images/project-3.png",
     projectName: "Todos App",
+    link:"https://todos-nextjs14-typescript-tailwind.vercel.app/"
   },
   {
     id: 4,
     imagePath: "/images/project-4.png",
     projectName: "CoinPlus",
+    link:"https://coin-plus.vercel.app/"
   },
 ];
 
-const ProjectCards = ({ imagePath, name }) => {
+const ProjectCards = ({ imagePath, name, link }) => {
   return (
     <div className="flex flex-col justify-center items-center gap-5 w-auto text-center mx-5">
 
@@ -66,7 +71,9 @@ const ProjectCards = ({ imagePath, name }) => {
       </div>
 
       <div className="flex justify-center gap-3 text-white w-full text-center text-sm">
+        <Link href={link} target="blanck">
         <button className="rounded-full bg-black p-3 w-[150px] ">Visit</button>
+        </Link>
         <button className="rounded-full bg-black p-3 w-[150px]">Github</button>
       </div>
     </div>
@@ -100,7 +107,7 @@ export const Projects = () => {
         },
       },
     ],
-    className:""
+    className:"mx-3"
   };
 
   return (
@@ -120,7 +127,7 @@ export const Projects = () => {
       <Slider {...settings}>
         {projects.map((e, index) => (
           <motion.div key={e.id} >
-            <ProjectCards imagePath={e.imagePath} name={e.projectName} />
+            <ProjectCards imagePath={e.imagePath} name={e.projectName} link={e.link}/>
           </motion.div>
         ))}
       </Slider>
