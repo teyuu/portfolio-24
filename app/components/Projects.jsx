@@ -1,5 +1,5 @@
 import React from "react";
-import {  h2Title, titleContainer } from "./tailwindClasses";
+import { h2Title, titleContainer } from "./tailwindClasses";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { getAnimationVariants } from "./FramerMotionVariants";
@@ -18,11 +18,7 @@ const NextArrow = ({ onClick, className }) => (
 );
 
 const PrevArrow = ({ onClick, className }) => (
-  <FaArrowAltCircleLeft
-    className={className}
-    onClick={onClick}
-    color="black"
-  />
+  <FaArrowAltCircleLeft className={className} onClick={onClick} color="black" />
 );
 
 const projects = [
@@ -50,19 +46,20 @@ const projects = [
 
 const ProjectCards = ({ imagePath, name }) => {
   return (
-    <div className="flex flex-col gap-5 w-fit text-center xl:mx-auto mx-10">
+    <div className="flex flex-col gap-5 w-fit text-center xl:mx-auto mx-5">
       <h2 className="text-xl uppercase font-bold border-b-2 bg-slate-400 text-white shadow-lg">
         {name}
       </h2>
 
-      <div className="relative h-auto w-full">
+      <div className="relative h-auto w-[450px]">
         <Image
           src={imagePath}
           width={400}
-          height={0}
-          alt="project"
+          height={300}
+          alt="Imagen de un proyecto"
           className="rounded-xl"
-          style={{ width: '100%', height: 'auto' }}
+          layout="responsive"
+          
         />
       </div>
 
@@ -101,7 +98,6 @@ export const Projects = () => {
         },
       },
     ],
-
   };
 
   return (
