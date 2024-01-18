@@ -1,5 +1,5 @@
 import React from "react";
-import { containerCenter, h2Title, titleContainer } from "./tailwindClasses";
+import {  h2Title, titleContainer } from "./tailwindClasses";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { getAnimationVariants } from "./FramerMotionVariants";
@@ -73,35 +73,36 @@ const ProjectCards = ({ imagePath, name }) => {
     </div>
   );
 };
-const settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3, // Número de tarjetas visibles a la vez
-  slidesToScroll: 1,
-  nextArrow: <NextArrow />, // Flecha derecha personalizada
-  prevArrow: <PrevArrow />,
-  responsive: [
-    {
-      breakpoint: 1300,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
 
-};
-export const Projects = ({settings}) => {
+export const Projects = () => {
   const animationVariants = getAnimationVariants();
 
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3, // Número de tarjetas visibles a la vez
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />, // Flecha derecha personalizada
+    prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+
+  };
 
   return (
     <section
