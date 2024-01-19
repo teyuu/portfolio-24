@@ -7,7 +7,7 @@ import { Projects } from './components/projects/Projects';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { Loading } from './components/Loading';
-import {NavBar} from './components/navbar/NavBar';
+
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
@@ -25,7 +25,7 @@ export default function Home() {
       {
         isLoading ? (<Loading isLoading={isLoading} />) : (
           <>
-            <NavBar />
+            
             <Hero />
             <About />
             <Technologies />
