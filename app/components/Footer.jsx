@@ -1,5 +1,5 @@
 import React from "react";
-import { navLinks } from "./navbar/Navlinks.js";
+import { navLinks } from "./navbar/Navlinks";
 import { motion } from "framer-motion";
 import Link  from "next/link";
 export const Footer = () => {
