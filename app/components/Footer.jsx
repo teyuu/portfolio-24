@@ -1,26 +1,7 @@
 import React from "react";
-
+import { navLinks } from "./navbar2/navLinks.js"
 import { motion } from "framer-motion";
 import Link  from "next/link";
-
-const navLinks = [
-  {
-    title: "About",
-    link: "#about",
-  },
-  {
-    title: "Experience",
-    link: "#experience",
-  },
-  {
-    title: "Projects",
-    link: "#projects",
-  },
-  {
-    title: "Contact",
-    link: "#contact",
-  },
-];
 
 export const Footer = () => {
   return (
