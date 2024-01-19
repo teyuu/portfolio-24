@@ -1,5 +1,5 @@
 import React from "react";
-import { navLinks } from "./Navbar/Navlinks";
+import { navLinks } from "./navbar/Navlinks";
 import { motion } from "framer-motion";
 import Link  from "next/link";
 export const Footer = () => {
@@ -10,7 +10,7 @@ export const Footer = () => {
            <Link key={e.title} href={e.link}>
            <motion.li 
            whileHover={{
-             textShadow:'#FC0 1px 0 10px',
+             textShadow:'#59E4A8 1px 0 10px',
              cursor:'pointer',
              scale:1.1
              

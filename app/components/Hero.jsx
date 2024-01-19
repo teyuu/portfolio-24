@@ -74,9 +74,11 @@ export const Hero = () => {
           </div>
 
           <div className="flex flex-col items-center gap-5">
+            <Link href='#contact'>
             <button className="rounded-full bg-black p-3 w-[150px] text-white">
               Contact Info
             </button>
+            </Link>
             <div className="text-4xl space-x-2">
               <Link href='https://github.com/teyuu' target="_blank">
               <button>

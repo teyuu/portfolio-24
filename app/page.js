@@ -3,14 +3,14 @@ import { useState, useEffect } from 'react';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Technologies } from './components/Technologies';
-import { Projects } from './components/Projects';
+import { Projects } from './components/projects/Projects';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { Loading } from './components/Loading';
-import NavBar from './components/Navbar/NavBar';
+import NavBar from './components/navbar/NavBar';
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {

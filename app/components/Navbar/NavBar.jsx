@@ -4,7 +4,7 @@ import { MdMenu, MdClose } from "react-icons/md";
 import { motion, AnimatePresence, spring } from "framer-motion";
 import { MobileMenu } from "./MobileMenu";
 import ToggleSwitch2 from "../buttons/ToggleSwitch2";
-import { navLinks } from "./Navlinks";
+import { navLinks } from "./Navlinks.js";
 import Link from "next/link";
 
 const NavBar = () => {
@@ -19,7 +19,7 @@ const NavBar = () => {
         <div className="container mx-auto flex justify-around">
           {/* Titulo */}
           <motion.div whileHover={{
-                  textShadow:'#FC0 1px 0 10px',
+                  textShadow:'#59E4A8 1px 0 10px',
                   cursor:'pointer',
                   scale:1.1
                   
@@ -34,7 +34,7 @@ const NavBar = () => {
                 <Link key={e.title} href={e.link}>
                 <motion.li 
                 whileHover={{
-                  textShadow:'#FC0 1px 0 10px',
+                  textShadow:'#59E4A8 1px 0 10px',
                   cursor:'pointer',
                   scale:1.1
                   

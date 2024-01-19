@@ -33,12 +33,12 @@ export const About = () => {
       </motion.div>
 
       <div className="h-2/3 flex flex-col lg:flex-row items-center gap-10 ">
-        <motion.div className="h-[300px] w-2/4" {...animationVariants}>
+        <motion.div className="h-auto w-3/4 md:w-full" {...animationVariants}>
           <Image
             src="/images/computer.png"
             alt="computer"
-            width={300}
-            height={300}
+            width={800}
+            height={400}
           />
         </motion.div>
 
