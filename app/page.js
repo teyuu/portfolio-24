@@ -7,7 +7,7 @@ import { Projects } from './components/projects/Projects';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { Loading } from './components/Loading';
-import { NavBar2 } from './components/navbar2/NavBar2';
+import { NavBar} from './components/navbar/NavBar';
 
 
 
@@ -27,7 +27,7 @@ export default function Home() {
       {
         isLoading ? (<Loading isLoading={isLoading} />) : (
           <>
-            <NavBar2/>
+            <NavBar/>
             <Hero />
             <About />
             <Technologies />

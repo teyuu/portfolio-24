@@ -7,7 +7,7 @@ import ToggleSwitch2 from "../buttons/ToggleSwitch2";
 import { navLinks } from "./navLinks.js";
 import Link from "next/link";
 
-export const NavBar2 = () => {
+export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
