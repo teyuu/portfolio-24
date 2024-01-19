@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <main className='h-auto w-full'>
       {
-        isLoading ? (<Loading isLoading={isLoading}/>) : (
+        isLoading ? (<Loading isLoading={isLoading} />) : (
           <>
             <NavBar />
             <Hero />
