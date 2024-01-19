@@ -7,7 +7,7 @@ import ToggleSwitch2 from "../buttons/ToggleSwitch2";
 import { navLinks } from "./navLinks.js";
 import Link from "next/link";
 
-const NavBar = () => {
+export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -66,4 +66,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+
