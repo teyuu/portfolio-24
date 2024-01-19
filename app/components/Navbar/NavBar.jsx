@@ -4,7 +4,7 @@ import { MdMenu } from "react-icons/md";
 import { motion, AnimatePresence, spring } from "framer-motion";
 import { MobileMenu } from "./MobileMenu";
 import ToggleSwitch2 from "../buttons/ToggleSwitch2";
-import { navLinks } from "./Navlinks.js";
+import { navLinks } from "./navLinks.js";
 import Link from "next/link";
 
 const NavBar = () => {
