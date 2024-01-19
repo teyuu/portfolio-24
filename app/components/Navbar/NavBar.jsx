@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 import { MdMenu } from "react-icons/md";
 import { motion, AnimatePresence, spring } from "framer-motion";
-import { MobileMenu } from "./MobileMenu";
+import { MobileMenu } from "../navbar2/MobileMenu";
 import ToggleSwitch2 from "../buttons/ToggleSwitch2";
-import { navLinks } from "./navLinks.js";
+import { navLinks } from "../navbar2/navLinks.js";
 import Link from "next/link";
 
 export const NavBar = () => {
