@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { MdMenu, MdClose } from "react-icons/md";
+import { MdMenu } from "react-icons/md";
 import { motion, AnimatePresence, spring } from "framer-motion";
 import { MobileMenu } from "./MobileMenu";
 import ToggleSwitch2 from "../buttons/ToggleSwitch2";
