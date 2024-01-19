@@ -58,7 +58,7 @@ export const Technologies = () => {
   return (
     <section  id="experience" className={containerCenter} >
       {/* Title */}
-      <motion.div className={titleContainer} {...animationVariants}>
+      <motion.div className={titleContainer} {...animationVariants}  whileHover={{ scale: 1.2 }}>
         <span>Explore my</span>
         <h2 className="text-4xl lg:text-5xl font-semibold">Experience</h2>
       </motion.div>

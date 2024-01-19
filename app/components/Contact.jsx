@@ -15,10 +15,10 @@ export const Contact = () => {
     <motion.div className='w-full flex flex-col items-center gap-5' {...animationVariants}>
 
       {/* Title */}
-      <div className={titleContainer}>
+      <motion.div className={titleContainer}  whileHover={{ scale: 1.2 }}>
         <p>Get in touch</p>
         <h2 className={h2Title}>Contact me</h2>
-      </div>
+      </motion.div>
 
       {/* Conctact card */}
       <div className='flex flex-col lg:flex-row justify-around items-center gap-3 w-full xl:w-2/4 p-5 rounded-full border-2 text-xl'>
@@ -27,10 +27,10 @@ export const Contact = () => {
           <p>tellini.matias@gmail.com</p>
         </div>
           <Link href='https://www.linkedin.com/in/matias-tellini-12a705232/' target="_blank">
-        <div className='flex items-center gap-2'>
+        <motion.div className='flex items-center gap-2'  whileHover={{ scale: 1.2 }}>
           <FaLinkedin/>
           <p>Linkedin</p>
-        </div>
+        </motion.div>
           </Link>
       </div>
     </motion.div>

@@ -47,6 +47,14 @@ export const Hero = () => {
   initial="initial"
   animate="animate"
   viewport={{ once: true }}
+  whileHover={{ y: [-50, 0], transition:{
+    delay:0.2,
+    duration: 0.80,
+    ease: 'easeInOut',
+    times: [0, 1], // Inicia y finaliza en la posición inicial
+    repeat: Infinity,
+    repeatType: 'reverse', // Revierte la animación para simular el rebote
+  } }}
  
 >
   <Image
@@ -63,7 +71,7 @@ export const Hero = () => {
           <div className="flex flex-col gap-5">
             <span className="text-lg">Hello, I&apos;m</span>
             <motion.span
-              variants={fadeInTitleAnimationVariant} initial="initial" animate="animate" viewport={{once:true}} 
+              variants={fadeInTitleAnimationVariant} initial="initial" animate="animate"  whileHover={{ scale: 1.1 }} viewport={{once:true}} 
               className="text-4xl lg:text-5xl font-semibold "
             >
               Matías Tellini
@@ -75,20 +83,20 @@ export const Hero = () => {
 
           <div className="flex flex-col items-center gap-5">
             <Link href='#contact'>
-            <button className="rounded-full bg-black p-3 w-[150px] text-white">
+            <motion.button  whileHover={{ scale: 1.2 }} className="rounded-full bg-black p-3 w-[150px] text-white">
               Contact Info
-            </button>
+            </motion.button >
             </Link>
             <div className="text-4xl space-x-2">
               <Link href='https://github.com/teyuu' target="_blank">
-              <button>
+              <motion.button  whileHover={{ scale: 1.2 }} >
                 <FaGithub />
-              </button>
+              </motion.button >
               </Link>
               <Link href='https://www.linkedin.com/in/matias-tellini-12a705232/'target="_blank">
-              <button>
+              <motion.button  whileHover={{ scale: 1.2 }}>
                 <FaLinkedin />
-              </button>
+              </motion.button >
               </Link>
             </div>
           </div>

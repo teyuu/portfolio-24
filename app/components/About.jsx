@@ -27,7 +27,7 @@ export const About = () => {
 
   return (
     <motion.section id="about" className={containerCenter}>
-      <motion.div className={titleContainer} {...animationVariants}>
+      <motion.div className={titleContainer} {...animationVariants}  whileHover={{ scale: 1.2 }}>
         <span>Get to know more</span>
         <h2 className={h2Title}>About me</h2>
       </motion.div>

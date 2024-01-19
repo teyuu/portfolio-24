@@ -44,7 +44,7 @@ export const Projects = () => {
       className=" container mx-auto h-auto lg:h-[80vh] flex flex-col justify-around p-5"
     >
       {/* Title */}
-      <motion.div className={titleContainer} {...animationVariants}>
+      <motion.div className={titleContainer} {...animationVariants}  whileHover={{ scale: 1.2 }}>
         <p>Browse my recent</p>
         <h2 className={h2Title}>Projects</h2>
       </motion.div>
