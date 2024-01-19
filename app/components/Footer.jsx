@@ -1,7 +1,27 @@
 import React from "react";
-import { navLinks } from "./navbar/navLinks.js"
+
 import { motion } from "framer-motion";
 import Link  from "next/link";
+
+const navLinks = [
+  {
+    title: "About",
+    link: "#about",
+  },
+  {
+    title: "Experience",
+    link: "#experience",
+  },
+  {
+    title: "Projects",
+    link: "#projects",
+  },
+  {
+    title: "Contact",
+    link: "#contact",
+  },
+];
+
 export const Footer = () => {
   return (
     <section className="w-full lg:h-[20vh] flex flex-col justify-center items-center gap-3">
