@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const ProjectCard = ({ imagePath, name, link, githubLink }) => {
+export const ProjectCard = ({ imagePath, name, link, githubLink, techs }) => {
     return (
       <div className="flex flex-col justify-center items-center gap-5 w-auto text-center mx-5">
   
@@ -20,6 +20,11 @@ export const ProjectCard = ({ imagePath, name, link, githubLink }) => {
             quality={50}
             priority
           />
+        </div>
+
+        <div className="h-[80px] text-center w-full text-black bg-gray-100
+        rounded p-5">
+          <p>{techs}</p>
         </div>
   
         <div className="flex justify-center gap-3 text-white w-full text-center text-sm">

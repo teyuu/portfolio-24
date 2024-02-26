@@ -45,6 +45,7 @@ export const ProjectsSlider = ({ projects }) => {
           name={project.projectName}
           link={project.link}
           githubLink={project.githubLink}
+          techs={project.techs}
         />
       ))}
     </Slider>

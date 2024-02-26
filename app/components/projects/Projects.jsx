@@ -10,28 +10,33 @@ const projects = [
     imagePath: "/images/project-1.png",
     projectName: "Clinica Kinessfe",
     link: "https://www.clinicakinessfe.com.ar/",
-    githubLink: "https://github.com/teyuu/clinica-nov-kinessfe"
+    githubLink: "https://github.com/teyuu/clinica-nov-kinessfe",
+    techs:"React, TailwindCSS, NextJS"
   },
   {
     id: 2,
     imagePath: "/images/project-2.png",
     projectName: "CineFilm",
     link: "https://movies-nextjs13.vercel.app/",
-    githubLink: "https://github.com/teyuu/movies_nextjs13"
+    githubLink: "https://github.com/teyuu/movies_nextjs13",
+    techs:"React, NextJS, TailwindCSS"
   },
   {
     id: 3,
     imagePath: "/images/project-3.png",
     projectName: "Todos App",
     link: "https://todos-nextjs14-typescript-tailwind.vercel.app/",
-    githubLink: "https://github.com/teyuu/todos-nextjs14-typescript-tailwind"
+    githubLink: "https://github.com/teyuu/todos-nextjs14-typescript-tailwind",
+    techs:"React, NextJS, TailwindCSS, Typescript, Framer-motion"
   },
   {
     id: 4,
     imagePath: "/images/project-4.png",
     projectName: "CoinPlus",
     link: "https://coin-plus.vercel.app/",
-    githubLink: "https://github.com/teyuu/CoinPlus"
+    githubLink: "https://github.com/teyuu/CoinPlus",
+    techs:"React, Redux ToolKit, Bootstrap, Auth0, Node, Express, Typescript, MongoDB, Solidity"
+    
   },
 ];
 

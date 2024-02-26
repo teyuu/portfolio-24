@@ -47,8 +47,8 @@ export const About = () => {
             <Card
               icon={<GiAchievement />}
               title="Experience"
-              text1="1+ years"
-              text2="Freelance Developer"
+              text1="2+ years"
+              text2="Developing personal projects"
             />
             <Card
               icon={<IoPeopleSharp />}
