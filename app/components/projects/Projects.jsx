@@ -11,7 +11,7 @@ const projects = [
     projectName: "Clinica Kinessfe",
     link: "https://www.clinicakinessfe.com.ar/",
     githubLink: "https://github.com/teyuu/clinica-nov-kinessfe",
-    techs:"React, TailwindCSS, NextJS"
+    techs:"React, Tailwind CSS, NextJS"
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const projects = [
     projectName: "CineFilm",
     link: "https://movies-nextjs13.vercel.app/",
     githubLink: "https://github.com/teyuu/movies_nextjs13",
-    techs:"React, NextJS, TailwindCSS"
+    techs:"React, NextJS, Tailwind CSS"
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const projects = [
     projectName: "Todos App",
     link: "https://todos-nextjs14-typescript-tailwind.vercel.app/",
     githubLink: "https://github.com/teyuu/todos-nextjs14-typescript-tailwind",
-    techs:"React, NextJS, TailwindCSS, Typescript, Framer-motion"
+    techs:"React, NextJS, Tailwind CSS, Typescript, Framer-motion"
   },
   {
     id: 4,
@@ -36,8 +36,16 @@ const projects = [
     link: "https://coin-plus.vercel.app/",
     githubLink: "https://github.com/teyuu/CoinPlus",
     techs:"React, Redux ToolKit, Bootstrap, Auth0, Node, Express, Typescript, MongoDB, Solidity"
-    
   },
+  {
+    id: 5,
+    imagePath: "/images/promptopia.png",
+    projectName: "Promptopia",
+    link: "https://project-promptopia-one-opal.vercel.app/",
+    githubLink: "https://github.com/teyuu/project_promptopia",
+    techs:"Javascript, NextJS, NextAuth, Tailwind CSS, MongoDB"
+  },
+  
 ];
 
 export const Projects = () => {
