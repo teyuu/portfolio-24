@@ -40,10 +40,18 @@ const projects = [
   {
     id: 5,
     imagePath: "/images/promptopia.png",
-    projectName: "Promptopia",
+    projectName: "Promptopia - Share Prompts",
     link: "https://project-promptopia-one-opal.vercel.app/",
     githubLink: "https://github.com/teyuu/project_promptopia",
     techs:"Javascript, NextJS, NextAuth, Tailwind CSS, MongoDB"
+  },
+  {
+    id: 6,
+    imagePath: "/images/modern-web.png",
+    projectName: "Travel App - Modern UI/UX Website",
+    link: "https://travel-app-wine-psi.vercel.app/",
+    githubLink: "https://github.com/teyuu/travel_app",
+    techs:"NextJS, Tailwind CSS, Typescript"
   },
   
 ];
