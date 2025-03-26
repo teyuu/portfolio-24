@@ -13,7 +13,7 @@ import {
 
 const Card = ({ icon, title, text1, text2 }) => {
   return (
-    <div className="w-full flex flex-col items-center gap-3 border-gray-400 border-2 rounded-3xl py-2 text-center">
+    <div className="w-full flex flex-col items-center gap-3 border-gray-400 border-2 dark:bg-gray-800 dark:text- rounded-3xl py-2 text-center">
       <p className="text-3xl">{icon}</p>
       <p className=" font-bold">{title}</p>
       <p>{text1}</p>
@@ -47,7 +47,7 @@ export const About = () => {
             <Card
               icon={<GiAchievement />}
               title="Experience"
-              text1="+1 years"
+              text1="+2 years"
               text2="Developing Full Stack Web Projects"
             />
             <Card
@@ -57,7 +57,7 @@ export const About = () => {
               text2="More than 700 hours of theoretical-practical training"
             />
           </motion.div>
-          <motion.p className="mt-5" {...animationVariants}>
+          <motion.p className="mt-5 leading-relaxed text-md " {...animationVariants}>
             I am a <span className="font-bold">Full Stack developer</span>. My education includes an intensive
             Bootcamp at Henry, where I gained over <span className="font-bold">700 hours of theoretical and
             hands-on training.</span>  Additionally, I have successfully contributed as

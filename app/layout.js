@@ -1,4 +1,5 @@
 
+import { ThemeProvider } from './components/ThemeProvider'
 import './globals.css'
 import { Poppins } from 'next/font/google'
 
@@ -10,16 +11,20 @@ export const metadata = {
   },
 }
 
-const poppins = Poppins({ subsets: ['latin'], weight:['300','700']})
+const poppins = Poppins({ subsets: ['latin'], weight: ['300', '700'] })
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={poppins.className}>
-      
-     {children}
-      
-        </body>
+        <ThemeProvider   attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
+
+      </body>
     </html>
   )
 }

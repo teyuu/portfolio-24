@@ -34,7 +34,7 @@ const TechCard = ({ title, technologies, index}) => {
       }}
       viewport={{once:true}}
     >
-      <p className="text-center text-2xl font-semibold text-gray-600">
+      <p className="text-center text-2xl font-semibold text-gray-600 dark:bg-gray-800 dark:text-white rounded-lg">
         {title}
       </p>
 

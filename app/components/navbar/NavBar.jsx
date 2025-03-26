@@ -6,6 +6,7 @@ import { MobileMenu } from "./MobileMenu";
 import ToggleSwitch2 from "../buttons/ToggleSwitch2";
 import { navLinks } from "./navLinks.js";
 import Link from "next/link";
+import { ThemeToggle } from "../ThemeToggle";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,9 +45,9 @@ export const NavBar = () => {
                 </motion.li>
                 </Link>
               ))}
-              {/* <div>
-                <ToggleSwitch2 />
-              </div> */}
+              <div>
+                <ThemeToggle/>
+              </div>
             </ul>
           </div>
 
