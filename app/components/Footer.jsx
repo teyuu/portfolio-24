@@ -24,7 +24,7 @@ export const Footer = () => {
       </ul>
 
       <p className="text-center ">
-        Copyright © 2024 Matías Tellini. All Rights Reserved.
+        Copyright © 2025 Matías Tellini. All Rights Reserved.
       </p>
     </section>
   );

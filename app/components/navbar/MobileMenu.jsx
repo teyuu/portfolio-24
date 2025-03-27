@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { MdClose } from "react-icons/md";
 import ToggleSwitch2 from "../buttons/ToggleSwitch2";
 import Link from "next/link";
+import { ThemeToggle } from "../ThemeToggle";
 
 const mobileLinkVars = {
   initial: {
@@ -49,9 +50,6 @@ export const MobileMenu = ({ navLinks, toggleMenu }) => {
             <motion.li onClick={toggleMenu} whileTap={{ scale: 1.2}}>{e.title}</motion.li>
             </Link>
           ))}
-          {/* <div>
-            <ToggleSwitch2 />
-          </div> */}
         </ul>
       </motion.div>
     </motion.div>

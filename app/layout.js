@@ -7,7 +7,7 @@ export const metadata = {
   title: 'Matias Tellini',
   description: 'Desarrollador Full Stack. Javascript, React, Typescript, Node, Express, SQL',
   icons: {
-    icon: '/images/mt.png', // /public path
+    icon: '/images/mt.png',
   },
 }
 
@@ -17,10 +17,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={poppins.className}>
-        <ThemeProvider   attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange>
+        <ThemeProvider attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange>
           {children}
         </ThemeProvider>
 

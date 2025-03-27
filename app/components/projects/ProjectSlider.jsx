@@ -31,21 +31,17 @@ export const ProjectsSlider = ({ projects }) => {
             },
           },
         ],
-        autoplay: true,
+        autoplay: false,
       
         className: "mx-3",
   };
 
   return (
     <Slider {...settings}>
-      {projects.map((project) => (
+      {projects.map((project, index) => (
         <ProjectCard
-          key={project.id}
-          imagePath={project.imagePath}
-          name={project.projectName}
-          link={project.link}
-          githubLink={project.githubLink}
-          techs={project.techs}
+          key={index}
+          {...project}
         />
       ))}
     </Slider>

@@ -27,7 +27,11 @@ export const About = () => {
 
   return (
     <motion.section id="about" className={containerCenter}>
-      <motion.div className={titleContainer} {...animationVariants}  whileHover={{ scale: 1.2 }}>
+      <motion.div
+        className={titleContainer}
+        {...animationVariants}
+        whileHover={{ scale: 1.2 }}
+      >
         <span>Get to know more</span>
         <h2 className={h2Title}>About me</h2>
       </motion.div>
@@ -57,16 +61,22 @@ export const About = () => {
               text2="More than 700 hours of theoretical-practical training"
             />
           </motion.div>
-          <motion.p className="mt-5 leading-relaxed text-md " {...animationVariants}>
-            I am a <span className="font-bold">Full Stack developer</span>. My education includes an intensive
-            Bootcamp at Henry, where I gained over <span className="font-bold">700 hours of theoretical and
-            hands-on training.</span>  Additionally, I have successfully contributed as
-            a Freelance Developer on a web project, showcasing my ability to
-            deliver high-quality solutions independently and collaborate
-            effectively with clients. I have further enhanced my skills through
-            various programming courses, demonstrating my commitment to
-            continuous learning and staying updated with the latest industry
-            trends.
+          <motion.p
+            className="mt-5 leading-relaxed text-md "
+            {...animationVariants}
+          >
+            I am a <span className="font-bold">Full Stack developer</span>. My
+            education includes an intensive Bootcamp at Henry, where I gained
+            over{" "}
+            <span className="font-bold">
+              700 hours of theoretical and hands-on training.
+            </span>{" "}
+            Additionally, I have successfully contributed to multiple projects
+            as a Freelance Developer, delivering high-quality solutions and
+            collaborating effectively with clients and teams. I have further
+            enhanced my skills through various programming courses,
+            demonstrating my commitment to continuous learning and staying
+            updated with the latest industry trends.
           </motion.p>
         </div>
       </div>
